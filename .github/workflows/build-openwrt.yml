@@ -126,7 +126,7 @@ jobs:
         rm -rf packages
         rm -rf *.buildinfo
         rm -rf profiles.json
-        rm -rf *rootfs*
+        rm -rf *pbboot*
         rm -rf *kernel*
         rm -rf *.manifest
         rm -rf sha256sums
