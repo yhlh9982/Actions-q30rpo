@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xiaomi_r3g 闭源Wi-Fi
+name: Xiaomi_r3g 闭源Wi-Fi
 
 on:
   repository_dispatch:
