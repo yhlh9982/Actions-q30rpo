@@ -127,7 +127,7 @@ jobs:
         rm -rf *.buildinfo
         rm -rf profiles.json
         rm -rf *pbboot*
-        rm -rf *kernel*
+        rm -rf *breed*
         rm -rf *.manifest
         rm -rf sha256sums
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
