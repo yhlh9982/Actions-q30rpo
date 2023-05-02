@@ -145,7 +145,7 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")">> $GITHUB_OUTPUT
-        echo "名称：Xiaomi_r3g 闭源Wi-Fi 18.06版本" >> release.txt
+        echo "名称：Xiaomi_r3g 闭源Wi-Fi 18.06版本 内核5.10" >> release.txt
         echo "默认网关：192.168.61.1" >> release.txt
         echo "默认用户和密码：root password" >> release.txt
         touch release.txt
