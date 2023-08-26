@@ -71,6 +71,14 @@ jobs:
     - name: Install feeds 安装软件源
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: iStore 添加iStore仓库
+      run: |
+        cd openwrt
+        echo >> feeds.conf.default
+        echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+        ./scripts/feeds update istore
+        ./scripts/feeds install -d y -p istore luci-app-store
+  
     - name: Load custom configuration 加载自定义配置
       run: |
         [ -e files ] && mv files openwrt/files
@@ -78,7 +86,7 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-    
+
     - name: SSH connection to Actions 连接开始
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
