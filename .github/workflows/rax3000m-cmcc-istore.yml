@@ -72,7 +72,8 @@ jobs:
       run: cd openwrt && ./scripts/feeds install -a
 
     - name: 增加istore插件
-      run: cd openwrt
+      run: |
+        cd openwrt
         echo >> feeds.conf.default
         echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
         ./scripts/feeds update istore
