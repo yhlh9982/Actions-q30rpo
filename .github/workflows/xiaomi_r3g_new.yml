@@ -71,6 +71,7 @@ jobs:
     - name: Install feeds 安装软件源
       run: cd openwrt && ./scripts/feeds install -a
 
+   
     - name: Load custom configuration 加载自定义配置
       run: |
         [ -e files ] && mv files openwrt/files
