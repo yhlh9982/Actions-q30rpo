@@ -74,10 +74,7 @@ jobs:
     - name: 更新ssr-plus
       run: |
         cd openwrt
-        cd package/feeds/luci
-        rm-rf luci-app-ssr-plus
-        cd ~
-        cd openwrt
+        rm -rf package/feeds/luci/luci-app-ssr-plus
         sed -i "/helloworld/d" "feeds.conf.default"
         echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
         sed -i "/helloworld/d" "feeds.conf.default"
