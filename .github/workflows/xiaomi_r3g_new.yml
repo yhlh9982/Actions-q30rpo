@@ -71,6 +71,19 @@ jobs:
     - name: Install feeds 安装软件源
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: 更新ssr-plus
+      run: |
+        cd openwrt
+        cd package/feeds/luci
+        rm-rf luci-app-ssr-plus
+        cd ~
+        cd openwrt
+        sed -i "/helloworld/d" "feeds.conf.default"
+        echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+        sed -i "/helloworld/d" "feeds.conf.default"
+        ./scripts/feeds clean
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
    
     - name: Load custom configuration 加载自定义配置
       run: |
