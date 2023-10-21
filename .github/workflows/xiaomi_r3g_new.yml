@@ -75,12 +75,34 @@ jobs:
     - name: 更新ssr-plus
       run: |
         cd openwrt
-        cat >> feeds.conf.default <<EOF
-        src-git-full kiddin9 https://github.com/kiddin9/openwrt-packages.git
-        EOF
-        ./scripts/feeds clean
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
+        rm -rf package/feeds/luci/luci-app-ssr-plus
+        rm -rf package/feeds/packages/chinadns-ng
+        rm -rf package/feeds/packages/dns2socks
+        rm -rf package/feeds/packages/dns2tcp
+        rm -rf package/feeds/packages/gn
+        rm -rf package/feeds/packages/hysteria
+        rm -rf package/feeds/packages/ipt2socks
+        rm -rf package/feeds/packages/lua-neturl
+        rm -rf package/feeds/packages/microsocks
+        rm -rf package/feeds/packages/naiveproxy
+        rm -rf package/feeds/packages/redsocks2
+        rm -rf package/feeds/packages/shadowsocksr-libev
+        rm -rf package/feeds/packages/shadowsocks-rust
+        rm -rf package/feeds/packages/shadow-tls
+        rm -rf package/feeds/packages/simple-obfs
+        rm -rf package/feeds/packages/tcping
+        rm -rf package/feeds/packages/trojan
+        rm -rf package/feeds/packages/tuic-client
+        rm -rf package/feeds/packages/v2raya
+        rm -rf package/feeds/packages/v2ray-core        
+        rm -rf package/feeds/packages/v2ray-geodata
+        rm -rf package/feeds/packages/v2ray-plugin
+        rm -rf package/feeds/packages/xray-core
+        rm -rf package/feeds/packages/xray-plugin
+        sed -i "/helloworld/d" "feeds.conf.default"
+        echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+        ./scripts/feeds update helloworld
+        ./scripts/feeds install -a -f -p helloworld
  
 
     - name: Load custom configuration 加载自定义配置
