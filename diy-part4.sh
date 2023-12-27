@@ -30,5 +30,3 @@ pushd feeds/packages/lang
 rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang
 popd
 
-./scripts/feeds update -a
-./scripts/feeds install -a
