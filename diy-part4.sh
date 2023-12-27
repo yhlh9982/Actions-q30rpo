@@ -23,3 +23,15 @@ echo 'src-git Openclash https://github.com/vernesong/OpenClash' >>feeds.conf.def
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 #git clone  -b mt7915_mtwifi --single-branch https://github.com/padavanonly/immortalwrt
+
+#- name: 增加istore插件
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+./scripts/feeds update istore
+./scripts/feeds install -d y -p istore luci-app-store
+
+
+#- name: 升级golang
+pushd feeds/packages/lang
+rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang
+popd
