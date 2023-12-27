@@ -71,6 +71,13 @@ jobs:
     - name: Install feeds 安装软件源
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: 升级golang
+      run: |
+        cd openwrt
+        pushd feeds/packages/lang
+        rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang
+        popd
+
     
     - name: Load custom configuration 加载自定义配置
       run: |
