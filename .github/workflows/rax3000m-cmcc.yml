@@ -20,8 +20,8 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x.git
-  REPO_BRANCH: openwrt-21.02
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
+  REPO_BRANCH: openwrt-24.10
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: rax3000m-cmcc.config
   DIY_P1_SH: diy-part1.sh
@@ -146,8 +146,8 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")">> $GITHUB_OUTPUT
-        echo "名称：rax3000m-cmcc 闭源Wi-Fi 21.02版本 内核5.4" >> release.txt
-        echo "默认网关：192.168.61.1" >> release.txt
+        echo "名称：rax3000m-cmcc 闭源Wi-Fi " >> release.txt
+        echo "默认网关：192.168.51.1" >> release.txt
         echo "默认用户和密码：root password" >> release.txt
         echo "插件：passwall ssplus+ openclash frp wg zerotier usb打印等。。" >> release.txt
         touch release.txt
