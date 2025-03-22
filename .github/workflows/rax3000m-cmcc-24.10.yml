@@ -151,7 +151,7 @@ jobs:
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")">> $GITHUB_OUTPUT
         echo "名称：rax3000m-cmcc 闭源Wi-Fi " >> release.txt
-        echo "默认网关：192.168.51.1" >> release.txt
+        echo "默认网关：192.168.61.1" >> release.txt
         echo "默认用户和密码：root password" >> release.txt
         echo "插件：passwall ssplus+ openclash frp wg zerotier usb打印等。。" >> release.txt
         touch release.txt
