@@ -17,8 +17,8 @@ on:
   workflow_dispatch:
     
 env:
-  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x.git
-  REPO_BRANCH: openwrt-21.02
+  REPO_URL: -b 2410 --single-branch --filter=blob:none https://github.com/padavanonly/immortalwrt-mt798x-24.10 immortalwrt-mt798x-24.10
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: xr30.config
   DIY_P1_SH: diy-part1.sh
@@ -138,7 +138,7 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")">> $GITHUB_OUTPUT
-        echo "名称：cmcc-xr30 闭源Wi-Fi 21.02版本 内核5.4" >> release.txt
+        echo "名称：cmcc-xr30 闭源Wi-Fi " >> release.txt
         echo "默认网关：192.168.61.1" >> release.txt
         echo "默认用户和密码：root password" >> release.txt
         echo "插件：passwall2 ssplus+ wg zerotier" >> release.txt
