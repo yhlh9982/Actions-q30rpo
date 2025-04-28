@@ -67,6 +67,8 @@ jobs:
     
     - name: Update feeds 更新软件源
       run: cd openwrt && ./scripts/feeds update -a
+           rm -rf feeds/packages/lang/golang
+           git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
     - name: Install feeds 安装软件源
       run: cd openwrt && ./scripts/feeds install -a
