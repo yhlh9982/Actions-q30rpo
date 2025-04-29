@@ -20,7 +20,7 @@ env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: xr30.config
+  CONFIG_FILE: xr30-24.10.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -67,8 +67,7 @@ jobs:
     
     - name: Update feeds 更新软件源
       run: cd openwrt && ./scripts/feeds update -a
-           rm -rf feeds/packages/lang/golang
-           git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+           
 
     - name: Install feeds 安装软件源
       run: cd openwrt && ./scripts/feeds install -a
