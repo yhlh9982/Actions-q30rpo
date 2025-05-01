@@ -1,26 +1,31 @@
-**English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
-
 
 
 云编译7981固件 （p3terx 2024新版 基于ubuntu22.04）
 
-360T7/cmcc 3000m/cmcc xr30
+路由器型号：360T7 / CMCC3000M / CMCCXR30
 
-闭源WIFI固件
+说明：24.10闭源WIFI固件（基于immortalwrt）
 
-含插件DDNS, PASSWALL，homeproxy,ssr-plus+,wg,zerotier（24.10源码编译）。
+     含插件ddns, passwall，homeproxy, ssr-plus+, wg, zerotier（24.10源码编译）。
 
-默认地址：192.168.61.1  密码：无，直接回车。
+     默认地址：192.168.61.1  密码：无，直接回车。
 
-237大佬源码网址: https://github.com/padavanonly/immortalwrt-mt798x-24.10
+     237大佬源码网址: https://github.com/padavanonly/immortalwrt-mt798x-24.10
 
-使用p3terx云编译模板 English | 中文
+     使用p3terx云编译模板
 
-不死u-boot用 H 大的刷，地址：https://github.com/hanwckf/bl-mt798x/releases
+固件位置： https://github.com/sonytxl/xiaomi-360-cmcc-immortalwrt/releases
+     
+注意事项：
 
-更新刷写固件时，跨版本更新的，记得不要保存设置，每次更新系统后再按住 rest键8 秒复位一次
+     不死u-boot用 H 大的刷，地址：https://github.com/hanwckf/bl-mt798x/releases
 
-刷写完新固件后，尤其是跨版本更新的，记得先清理浏览器缓存，再访问路由器进行设置。
+     更新刷写固件时，跨版本更新的，记得不要保存设置，每次更新系统后再按住 rest键8 秒复位一次
+
+     刷写完新固件后，尤其是跨版本更新的，记得先清理浏览器缓存，再访问路由器进行设置。
+
+
+
 
 # Actions-OpenWrt
 
