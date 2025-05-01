@@ -2,17 +2,21 @@
 
 云编译7981固件 （p3terx 2024新版 基于ubuntu22.04）
 
-路由器型号：360T7 / CMCC3000M / CMCCXR30
+路由器型号：
 
-说明：24.10闭源WIFI固件（基于immortalwrt）
+     360T7 / CMCC3000M / CMCCXR30
+
+说明：
+     
+     24.10闭源WIFI固件（基于immortalwrt）
 
      含插件ddns, passwall，homeproxy, ssr-plus+, wg, zerotier（24.10源码编译）。
 
      默认地址：192.168.61.1  密码：无，直接回车。
 
-     237大佬源码网址: https://github.com/padavanonly/immortalwrt-mt798x-24.10
+237大佬源码网址: https://github.com/padavanonly/immortalwrt-mt798x-24.10
 
-     使用p3terx云编译模板
+使用p3terx云编译模板
 
 固件位置： https://github.com/sonytxl/xiaomi-360-cmcc-immortalwrt/releases
      
