@@ -1,5 +1,27 @@
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
+
+
+云编译7981固件 （p3terx 2024新版 基于ubuntu22.04）
+
+360T7/cmcc 3000m/cmcc xr30
+
+闭源WIFI固件
+
+含插件DDNS, PASSWALL，homeproxy,ssr-plus+,wg,zerotier（24.10源码编译）。
+
+默认地址：192.168.61.1  密码：无，直接回车。
+
+237大佬源码网址: https://github.com/padavanonly/immortalwrt-mt798x-24.10
+
+使用p3terx云编译模板 English | 中文
+
+不死u-boot用 H 大的刷，地址：https://github.com/hanwckf/bl-mt798x/releases
+
+更新刷写固件时，跨版本更新的，记得不要保存设置，每次更新系统后再按住 rest键8 秒复位一次
+
+刷写完新固件后，尤其是跨版本更新的，记得先清理浏览器缓存，再访问路由器进行设置。
+
 # Actions-OpenWrt
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
