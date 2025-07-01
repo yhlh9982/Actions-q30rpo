@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: xiaomi-R3G(imm)
+name: xiaomi-R3G-imm
 
 on:
   repository_dispatch:
