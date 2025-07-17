@@ -18,7 +18,7 @@ on:
     
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
-  REPO_BRANCH: openwrt-24.10-6.6
+  REPO_BRANCH: 2410
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: mt7981-24.10.config
   DIY_P1_SH: diy-part1.sh
@@ -117,7 +117,13 @@ jobs:
       run: |
         # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
         cd openwrt/bin/targets/*/*
-        
+        rm -rf packages
+        rm -rf *.buildinfo
+        rm -rf profiles.json
+        rm -rf *rootfs*
+        rm -rf *kernel*
+        rm -rf *.manifest
+        rm -rf sha256sums
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
     
