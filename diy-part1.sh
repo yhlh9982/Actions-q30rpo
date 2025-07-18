@@ -23,7 +23,7 @@
 #echo 'src-git luci-app-smartdns https://github.com/pymumu/luci-app-smartdns.git;master' >>feeds.conf.default
 #echo 'src-git openwrt-smartdns https://github.com/pymumu/openwrt-smartdns.git;master' >>feeds.conf.default
 
-git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
+#git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/opasswall-packages
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
