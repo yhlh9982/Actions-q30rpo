@@ -27,7 +27,7 @@
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/opasswall-packages
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
-git clone --depth=1 -b dev https://github.com/vernesong/OpenClash luci-app-openclash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash package/luci-app-openclash
 git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/luci-app-nikki
 
 #git clone --depth=1 https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
