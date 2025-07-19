@@ -49,21 +49,7 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        
-    - name: Free up disk space
-      run: |
-        echo "清理前磁盘空间..."
-        df -hT
-        # 删除不需要的大型预装软件
-        sudo rm -rf /usr/share/dotnet
-        sudo rm -rf /opt/ghc
-        sudo rm -rf "/usr/local/share/boost"
-        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
-        # 清理 apt 缓存
-        sudo apt-get clean
-        echo "清理后磁盘空间..."
-        df -hT
-        
+ 
     - name: Clone source code 下载源码
       working-directory: /workdir
       run: |
