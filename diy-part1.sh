@@ -36,3 +36,6 @@ git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/luci
 git clone --depth=1 -b js https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice     #关机
 git clone --depth=1 -b main https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac   #集客
 git clone --depth=1 -b main https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard   #网络设置向导
+git clone --depth=1 -b js https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
+git clone --depth=1 -b main https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
+
