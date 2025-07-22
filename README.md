@@ -4,15 +4,15 @@
 
 路由器型号：
 
-     360T7 / CMCC3000M / CMCCXR30 / JCG Q30
+     JCG Q30
 
 说明：
      
      24.10闭源WIFI固件（基于immortalwrt）
 
-     含插件 passwall，homeproxy, ssr-plus+, wg, zerotier（24.10源码编译）。
+     含插件 passwall2 zerotier（24.10源码编译）。
 
-     默认地址：192.168.61.1  密码：无，直接回车。
+     默认地址：192.168.30.1  密码：无，直接回车。
 
 237大佬源码网址: https://github.com/padavanonly/immortalwrt-mt798x-24.10
 
