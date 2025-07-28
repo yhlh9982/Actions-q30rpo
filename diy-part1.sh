@@ -60,6 +60,6 @@ rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
 rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 # 更新 golang 1.25 版本
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+#rm -rf feeds/packages/lang/golang
+#git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
