@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: xiaomi-R3G-imm
+name: x86
 
 on:
   repository_dispatch:
