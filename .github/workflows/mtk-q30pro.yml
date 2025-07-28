@@ -139,10 +139,10 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")">> $GITHUB_OUTPUT
-        echo "名称：360T7,cmcc3000m,jcg-q30,cmcc-xr30 闭源Wi-Fi " >> release.txt
-        echo "默认网关：192.168.61.1" >> release.txt
+        echo "名称：jcg-q30 闭源Wi-Fi " >> release.txt
+        echo "默认网关：192.168.30.1" >> release.txt
         echo "默认用户和密码：root password" >> release.txt
-        echo "插件：passwall ssplus+ homeproxy wg zerotier" >> release.txt
+        echo "插件：passwall wg zerotier" >> release.txt
         touch release.txt
         [ ${UPLOAD_GOFILE} = true && ${{ steps.gofile.outputs.url }} ] && echo "🔗 [GoFile](${{ steps.gofile.outputs.url }})" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
