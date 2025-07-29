@@ -39,6 +39,7 @@ git clone --depth=1 -b main https://github.com/sirpdboy/luci-app-netwizard packa
 git clone --depth=1 -b js https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat
 git clone --depth=1 -b main https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
 git clone --depth=1 -b main https://github.com/oppen321/luci-app-wolplus package/luci-app-wolplus
+git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
 WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
 mkdir $WORKINGDIR -p
