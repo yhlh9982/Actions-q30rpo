@@ -58,25 +58,6 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/op
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 
-WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
-mkdir $WORKINGDIR -p
-rm $WORKINGDIR/* -fr
-wget https://github.com/pymumu/openwrt-smartdns/archive/master.zip -O $WORKINGDIR/master.zip
-unzip $WORKINGDIR/master.zip -d $WORKINGDIR
-mv $WORKINGDIR/openwrt-smartdns-master/* $WORKINGDIR/
-rmdir $WORKINGDIR/openwrt-smartdns-master
-rm $WORKINGDIR/master.zip
-
-LUCIBRANCH="master" #更换此变量
-WORKINGDIR="`pwd`/feeds/luci/applications/luci-app-smartdns"
-mkdir $WORKINGDIR -p
-rm $WORKINGDIR/* -fr
-wget https://github.com/pymumu/luci-app-smartdns/archive/${LUCIBRANCH}.zip -O $WORKINGDIR/${LUCIBRANCH}.zip
-unzip $WORKINGDIR/${LUCIBRANCH}.zip -d $WORKINGDIR
-mv $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}/* $WORKINGDIR/
-rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
-rm $WORKINGDIR/${LUCIBRANCH}.zip
-
 # 常用工具与应用
 git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice # 关机功能
 git clone --depth=1 -b main https://github.com/oppen321/luci-app-wolplus package/luci-app-wolplus
@@ -84,7 +65,6 @@ git clone --depth=1 https://github.com/asvow/luci-app-tailscale.git package/luci
 git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/gecoosac # 集客 AC 控制器
 git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp # 网络引导/分区扩展
 git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/easytier # EasyTier
-
 
 echo " "
 echo "========================================================================================================================"
