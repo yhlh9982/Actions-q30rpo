@@ -52,13 +52,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
- 
-    - name: Clone source code 下载源码
-      working-directory: /workdir
-      run: |
-        df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Free up disk space on Runner
       run: |
@@ -91,6 +84,13 @@ jobs:
           
         echo "==> Final disk space:"
         df -hT
+ 
+    - name: Clone source code 下载源码
+      working-directory: /workdir
+      run: |
+        df -hT $PWD
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
           
     - name: Load custom feeds 加载软件源
       run: |
