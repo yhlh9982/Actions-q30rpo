@@ -12,11 +12,11 @@
 
 # 科学上网插件
 # nikki
-git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/nikki
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/nikki
 
 # openclash
 rm -rf feeds/luci/applications/luci-app-openclash
-git clone --depth=1 -b dev https://github.com/vernesong/OpenClash package/openclash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/openclash
 
 # passwall-packages
 # 移除 openwrt feeds 自带的核心库
@@ -29,7 +29,7 @@ rm -rf feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
 
 # asswall2
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 
 # 更新 golang 1.25 版本
 rm -rf feeds/packages/lang/golang
