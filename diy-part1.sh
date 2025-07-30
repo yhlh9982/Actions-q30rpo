@@ -85,8 +85,8 @@ git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 
 # 更新 golang 1.25 版本
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 # smartdns
 WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
