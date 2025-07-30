@@ -81,7 +81,7 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/op
 rm -rf feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
 
-# asswall2
+# passwall2
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 
 # 更新 golang 1.25 版本
