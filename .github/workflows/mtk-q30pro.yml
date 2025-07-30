@@ -89,19 +89,18 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     
-    - name: Load custom feeds 加载软件源
+    - name: Update feeds 更新软件源
+      run: cd openwrt && ./scripts/feeds update -a
+
+    - name: Install feeds 安装软件源
+      run: cd openwrt && ./scripts/feeds install -a
+    
+    - name: Load custom feeds 加载额外软件
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-    
-    - name: Update feeds 更新软件源
-      run: cd openwrt && ./scripts/feeds update -a
-           
-
-    - name: Install feeds 安装软件源
-      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration 加载自定义配置
       run: |
