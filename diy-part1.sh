@@ -53,12 +53,60 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus.git packag
 
 # 常用工具与应用
 git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice # 关机功能
-git clone --depth=1 -b main https://github.com/oppen321/luci-app-wolplus package/luci-app-wolplus
+git clone --depth=1 -b main https://github.com/oppen321/luci-app-wolplus package/luci-app-wolplus #网络唤醒
 git clone --depth=1 https://github.com/asvow/luci-app-tailscale.git package/luci-app-tailscale # Tailscale
 git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/gecoosac # 集客 AC 控制器
-git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp # 网络引导/分区扩展
-git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/easytier # EasyTier
+git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp # #一键自动格式化分区、扩容、自动挂载插件
+git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier # EasyTier
+git clone --depth=1 https://github.com/destan19/OpenAppFilter package/luci-app-oaf  # 应用过滤(OAF)
+git clone --depth=1 https://github.com/sirpdboy/luci-app-taskplan package/luci-app-taskplan   #任务设置2.0版
+git clone --depth=1 https://github.com/sirpdboy/luci-app-watchdog package/luci-app-watchdog  #看门狗
+git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk package/luci-app-mentohust  #锐捷验证 luci-app-mentohust
 
+# 科学上网插件
+# nikki
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/nikki
+
+# openclash
+rm -rf feeds/luci/applications/luci-app-openclash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/openclash
+
+# passwall-packages
+# 移除 openwrt feeds 自带的核心库
+# rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+# git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwall-packages
+
+# passwall
+# 移除 openwrt feeds 过时的luci版本
+rm -rf feeds/luci/applications/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
+
+# asswall2
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
+
+# 更新 golang 1.25 版本
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+
+# smartdns
+WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
+mkdir $WORKINGDIR -p
+rm $WORKINGDIR/* -fr
+wget https://github.com/pymumu/openwrt-smartdns/archive/master.zip -O $WORKINGDIR/master.zip
+unzip $WORKINGDIR/master.zip -d $WORKINGDIR
+mv $WORKINGDIR/openwrt-smartdns-master/* $WORKINGDIR/
+rmdir $WORKINGDIR/openwrt-smartdns-master
+rm $WORKINGDIR/master.zip
+
+LUCIBRANCH="master" #更换此变量
+WORKINGDIR="`pwd`/feeds/luci/applications/luci-app-smartdns"
+mkdir $WORKINGDIR -p
+rm $WORKINGDIR/* -fr
+wget https://github.com/pymumu/luci-app-smartdns/archive/${LUCIBRANCH}.zip -O $WORKINGDIR/${LUCIBRANCH}.zip
+unzip $WORKINGDIR/${LUCIBRANCH}.zip -d $WORKINGDIR
+mv $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}/* $WORKINGDIR/
+rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
+rm $WORKINGDIR/${LUCIBRANCH}.zip
 echo " "
 echo "========================================================================================================================"
 echo " All custom packages have been cloned successfully."
