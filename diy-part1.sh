@@ -53,7 +53,7 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus.git packag
 
 # 常用工具与应用
 git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroffdevice # 关机功能
-git clone --depth=1 -b main https://github.com/oppen321/luci-app-wolplus package/luci-app-wolplus #网络唤醒
+git clone --depth=1 -b main https://github.com/animegasan/luci-app-wolplus.git package/luci-app-wolplus #网络唤醒
 git clone --depth=1 https://github.com/asvow/luci-app-tailscale.git package/luci-app-tailscale # Tailscale
 git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/luci-app-gecoosac # 集客 AC 控制器
 git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp  #一键自动格式化分区、扩容、自动挂载插件
