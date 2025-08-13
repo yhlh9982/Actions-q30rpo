@@ -61,6 +61,7 @@ git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/lu
 git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf  # 应用过滤(OAF)
 git clone --depth=1 https://github.com/sirpdboy/luci-app-taskplan.git package/luci-app-taskplan   #任务设置2.0版
 git clone --depth=1 https://github.com/sirpdboy/luci-app-watchdog.git package/luci-app-watchdog  #看门狗
+git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard.git package/luci-app-netwizard  #网络设置向导
 git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git package/luci-app-mentohust  #锐捷验证 luci-app-mentohust
 
 # 科学上网插件
