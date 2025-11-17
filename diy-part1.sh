@@ -52,7 +52,7 @@ git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/luc
 git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus.git package/luci-app-advancedplus
 
 # iStore系列组件
-git clone --depth=1 -b main https://github.com/linkease/istore-ui.git package/app-store-ui  #istroe ui
+# git clone --depth=1 -b main https://github.com/linkease/istore-ui.git package/app-store-ui  #istroe ui
 git clone --depth=1 -b main https://github.com/linkease/istore.git package/istore-luci  #luci-app-store
 git clone --depth=1 -b master https://github.com/linkease/nas-packages.git package/store-nas-packages  #istroe系列插件
 git clone --depth=1 -b main https://github.com/linkease/nas-packages-luci.git package/istore-nas-packages-luci  #istroe系列插件luci
